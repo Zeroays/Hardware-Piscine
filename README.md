@@ -1,5 +1,5 @@
 # 42RoboLab - Hardware Piscine
-A one week intensive course to develop a working 2D and 3D API for solid modeling.  Using Onshape's in-house program, Featurescript, parts were designed within parametric standards.
+A one week intensive course to develop a working 2D and 3D API for solid modeling.  Using Onshape's in-house programming language, Featurescript, parts were designed within parametric standards.
 
 ## API:
    * [2D](https://cad.onshape.com/documents/937545479d56780f57c907dc/w/889edb79cb60ba7ac82416d5/e/2f0649118e67d02ee5240aad)
