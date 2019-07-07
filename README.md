@@ -2,9 +2,10 @@
 A one week intensive course to develop a working 2D and 3D API for solid modeling.  Using Onshape's in-house program, Featurescript, parts were designed within parametric standards.
 
 ## API:
-   * [2D](https://github.com/Zeroays/Hardware-Piscine/blob/master/png/2D%20-%20Clover.gif)
+   * [2D]
        * Draws a clover emblem that can be placed onto any flat plane or face.  Includes a built-in
        3D extrude tool.  Otherwise, a 2D figure is sketched out.
+   ![](https://github.com/Zeroays/Hardware-Piscine/blob/master/png/2D%20-%20Clover.gif)
         
    * [3D - Wedge](https://cad.onshape.com/documents/a41dfa6250065e54b465207c/w/793852063b24e68979f7a476/e/684a2ea7e1b8397036a398f2)
        * Generates a wedge with an inner triangular piece.  Can vary the extrusion depth, and height/width of the triangles separately.
