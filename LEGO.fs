@@ -217,6 +217,7 @@ export const myCube = defineFeature(function(context is Context, id is Id, defin
     //                 separate parts inside the Onshape UI interface) are then joined using the opBoolean function
     
         //sketchId -> User assigned id for stud sketch
+        //extrudeId -> User assigned id for extrude
         //boolId -> User assigned id for boolean (joining parts)
         //extrudeAmt -> Amount to extrude sketch
     
