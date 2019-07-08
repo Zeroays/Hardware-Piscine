@@ -176,7 +176,8 @@ export const myCube = defineFeature(function(context is Context, id is Id, defin
     
     //createPosts : Creates the posts that are generated should the LEGO piece not fit the criteria of the createMates function.  In this case, posts are generated for 1 x M pieces,
     //              where M is an integer >= 2
-    
+        
+        //length -> Length of LEGO piece (can change uLength to vary)
         //width -> Width of LEGO piece (can change uWidth to vary)
         //postDia -> Diameter of Post (can change postDia to vary)
         //postWidth -> Distance from bottom left corner of Lego piece to post, horizontally (can change uWidth to vary)
