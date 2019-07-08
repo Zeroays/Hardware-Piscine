@@ -29,6 +29,10 @@ export const myFeature = defineFeature(function(context is Context, id is Id, de
         
         //Points imported as DXF and added manually
         //https://cad.onshape.com/documents/937545479d56780f57c907dc/w/889edb79cb60ba7ac82416d5/e/ea135cd06b50b2da6bf2aafe
+        
+        //emblemSections is a variable that keeps track of how many sections the Clover Image is split into
+        //Can add more sections, or split them up as desired
+        var emblemSections = 9;
         var emblemS1 = [vector(398, 904) * millimeter, vector(484, 785) * millimeter, vector(572, 682) * millimeter];
         var emblemS2 = [vector(572, 682) * millimeter, vector(516, 620) * millimeter, vector(460, 540) * millimeter];
         var emblemS3 = [
@@ -82,7 +86,7 @@ export const myFeature = defineFeature(function(context is Context, id is Id, de
         emblemLeft = shiftFlipScale(context, emblemLeft, definition.scale, 398, -504, 1);
         
         //Creates the 2D sketch
-        sketchEmblem(context, id, emblemLeft, emblemRight, definition.parameter);
+        sketchEmblem(context, id, emblemLeft, emblemRight, emblemSections, definition.parameter);
         
         //Boolean check box for built-in 3D options
         if (definition.myBoolean == true) {
@@ -124,16 +128,16 @@ export const myFeature = defineFeature(function(context is Context, id is Id, de
         //leftArray -> left half of emblem (tied to variable emblemLeft)
         //rightArray -> right half of emblem (tied to variable emblemRight)
         //selectedFace -> face/plane user selects for the sketch to be projected on
-    function sketchEmblem(context is Context, id is Id, leftArray is array, rightArray is array, selectedFace is Query) {
+    function sketchEmblem(context is Context, id is Id, leftArray is array, rightArray is array, emblemSections is number, selectedFace is Query) {
             var sketch1 = newSketch(context, id + "sketch1", {
                     "sketchPlane" : selectedFace
             });
-            for (var i = 0; i != 9; i += 1) {
+            for (var i = 0; i < emblemSections; i += 1) {
                 skFitSpline(sketch1, ("splineA" ~ toString(i)), {
                             "points" : leftArray[i]
                         });
             }
-            for (var i = 0; i != 9; i += 1) {
+            for (var i = 0; i < emblemSections; i += 1) {
                 skFitSpline(sketch1, ("splineB" ~ toString(i)), {
                             "points" : rightArray[i]
                         });
