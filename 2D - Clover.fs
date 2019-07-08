@@ -127,6 +127,7 @@ export const myFeature = defineFeature(function(context is Context, id is Id, de
     
         //leftArray -> left half of emblem (tied to variable emblemLeft)
         //rightArray -> right half of emblem (tied to variable emblemRight)
+        //emblemSections -> The amount of sections the Clover Emblem is split into.  Hard-coded to be 9
         //selectedFace -> face/plane user selects for the sketch to be projected on
     function sketchEmblem(context is Context, id is Id, leftArray is array, rightArray is array, emblemSections is number, selectedFace is Query) {
             var sketch1 = newSketch(context, id + "sketch1", {
